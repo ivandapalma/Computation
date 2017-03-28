@@ -1,0 +1,7 @@
+
+Origen, Clase, Alimentacion, Valor, Situacion, Ejemplo
+Africa, Mamifero, Carnivoro, Alto, Peligro, +
+Africa, Reptil, Herbivoro, Bajo, Normal, -
+Africa, Reptil, Herbivoro, Alto, Peligro, +
+Europa, Mamifero, Herbivoro, Bajo, Peligro, -
+Africa, Mamífero, Carnivoro, Normal, Peligro, +
