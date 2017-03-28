@@ -1,0 +1,8 @@
+
+Cielo, Temperatura, Humedad, Viento, Agua, Prevision, Hacer, Deporte
+Soleado,Templada,Normal,Fuerte,Templada,Igual,+
+Soleado,Templada,Alta,Fuerte,Templada,Igual,+
+Lluvia,Fria,Alta,Fuerte,Templada,Cambio,-
+Soleado,Templada,Alta,Fuerte,Fria,Cambio,+
+Soleado,Templada,Alta,Fuerte,Fria,Cambio,-
+Lluvia,Templada,Alta,Fuerte,Fria,Cambio,+

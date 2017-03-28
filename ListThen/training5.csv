@@ -1,0 +1,9 @@
+Color,Tamanio,Altura,Tipo
+Azul,Corto,Pequenio,+
+Roja,Largo,Mediano,+
+Azul,?,Pequenio,-
+?,?,Pequenio,+
+Azul,?,?,-
+Roja,?,?,-
+?,Largo,?,+
+?,?,Grande,+
