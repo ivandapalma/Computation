@@ -1,0 +1,60 @@
+Hu = funcion_CalculaHu( Ibin )
+
+Devuelve un vector columna (Hu) de tamaño 7 (nosotros solo calculamos los 4 primeros)
+
+
+
+De la fórmula del Momento ordinario de orden (p+q) obtenemos:
+
+Coord X de centroide = m10 / m00
+Coord Y de centroide = m01 / m00
+
+Para calcular los momentos de HU hay q calcular los centroides del objeto.
+
+Phi 5, 6 y 7 no hacen falta calcularo (Con los 4 primeros sobra).
+
+Primer paso: calcular centroides.
+Segundo paso: recorrer todos los pixeles de la imagen, acumulando "algo",
+calculando mu con valores desde 0 hasta 3.
+
+
+
+
+Si un punto está en la frontera, para decidir a qué clase corresponde, tenemos
+en cuenta la suma de la diagonal de las covarianzas de cada clase:
+	trace(Covarianzas(:,:,1))
+	trace(Covarianzas(:,:,2))
+Pertenecerá a la que tenga más dispersión (la del valor más grande del trace anterior.
+
+
+
+CLASIFICADOR
+
+Para el clasificador elegiremos, por ejemplo, los 3 mejores descriptores entre los 12 que disponemos.
+
+
+
+
+
+
+REPRESENTACION DE LOS VALORES DE CIRCULOS, CUADRADOS Y TRIANGULOS
+
+Cx = 1; % EJE X: COMPACTICIDAD
+Cy = 2; % EJE Y: EXCENTRICIDAD
+
+plot(inputs_Norm(Cx,outputs==1),inputs_Norm(Cy,outputs==1),'rO'),
+hold on,
+plot(inputs_Norm(Cx,outputs==2),inputs_Norm(Cy,outputs==2),'b*'),
+hold on,
+plot(inputs_Norm(Cx,outputs==3),inputs_Norm(Cy,outputs==3),'g^');
+
+
+CUANTIFICAR SEPARABILIDAD ENTRE CLASES
+
+Jc1 = indiceJ(inputs_Norm(1,:),output); % da 41
+
+Jc2 = indiceJ(inputs_Norm(2,:),output); % da 0.1224 MUY MALO
+
+
+% Obtiene las combinaciones, del 1 al 6, de 3 en 3. Antes hay que hacer lo de la J individuales
+combnk(1:6,3); 
